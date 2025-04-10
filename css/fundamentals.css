@@ -1,0 +1,348 @@
+body {
+  background: var(--BG-COLOR);
+}
+
+/* MAIN CONTENT */
+
+main {
+  max-width: 100vw;
+}
+
+/* INTRO SECTION */
+
+#intro {
+  background: url(../Images/Desktop\ -\ 1.jpeg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.01);
+}
+
+#intro article {
+  z-index: 100;
+}
+
+#intro article h1 {
+  font-size: 7rem;
+  font-weight: lighter;
+  color: white;
+  font-family: var(--LOGO-FONT2);
+}
+
+#intro article span {
+  font-family: var(--SECONDARY-FONT);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-40px);
+  display: grid;
+  place-content: center;
+}
+
+.down-nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.down-container {
+  background: var(--BG-COLOR2);
+  height: 60px;
+  width: 60px;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--MAIN-COLOR2);
+  border-radius: 50%;
+  animation: down 2s linear 0 infinite forwards forwards;
+  cursor: pointer;
+  position: relative;
+}
+
+.down-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 120%;
+  width: 120%;
+  border: 2px solid var(--BG-COLOR);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: animate 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.down-container:hover * {
+  animation: none;
+}
+
+/* FUNDAMENTALS */
+
+#fundamentals {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  padding-top: 6rem;
+}
+
+.main-h2 {
+  font-size: 3rem;
+  font-family: var(--SECONDARY-FONT);
+  font-weight: 400;
+}
+
+.main-h2 span {
+  color: var(--MAIN-COLOR2);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
+}
+
+.main-h2 div {
+  display: inline;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.content {
+  max-width: 100vw;
+  display: flex;
+  padding-top: 3rem;
+}
+
+.left {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left h3 {
+  font-family: var(--MAIN-FONT);
+  font-weight: 300;
+}
+
+.left img {
+  width: 350px;
+}
+
+.fret,
+.box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fret svg,
+.box svg {
+  transform: scale(4);
+}
+
+.fret img {
+  width: 120px;
+}
+
+.fret p,
+.box p {
+  font-size: 2rem;
+  font-family: var(--SECONDARY-FONT);
+}
+
+.fret ul li,
+.box ul li {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+  line-height: 1.9;
+  transform: translateY(20px);
+}
+
+.box {
+  gap: 3rem;
+}
+
+.box svg {
+  transform: scale(4) translateY(6px);
+}
+
+/* OTHER PARTS CSS */
+
+.other-parts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.other-parts svg {
+  transform: scale(3);
+}
+
+.other-parts div {
+  width: 300px;
+}
+
+.other-parts div p {
+  font-family: var(--SECONDARY-FONT);
+  font-size: 4rem;
+}
+
+.other-parts div ul li {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.other-parts div:last-child {
+  align-self: flex-start;
+}
+
+.other-parts svg:last-of-type {
+  align-self: flex-start;
+  transform: scale(5) translateY(10px) translateX(-10px);
+}
+
+.other-parts svg:first-of-type {
+  transform: scale(5) translateY(20px) translateX(15px);
+}
+
+.other-parts div:first-child {
+  align-self: flex-end;
+  transform: translateY(-80px);
+}
+
+/* GUITAR HOW TO (HOLD THE GUITAR AND THE PICK) */
+
+#how-to {
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+#how-to article figure {
+  width: 100%;
+  gap: 3rem;
+  display: flex;
+  padding: 2rem;
+}
+
+#how-to article figure figcaption {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+}
+
+#how-to article figure figcaption ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+#how-to article figure figcaption span {
+  font-family: var(--SECONDARY-FONT);
+}
+
+#how-to article figure img {
+  border: 2px solid var(--MAIN-COLOR2);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* RECOMMENDATION CSS */
+
+#recommendation h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#recommendation article {
+  display: flex;
+  padding: 1rem;
+  padding-top: 4rem;
+  justify-content: space-evenly;
+}
+
+/* GOOD LUCK MESSAGE */
+
+#message {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+#message p {
+  line-height: 1.9;
+  font-family: var(--SECONDARY-FONT);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#message p span {
+  font-weight: bold;
+  color: var(--MAIN-COLOR2);
+}
+
+#message p span:last-child {
+  display: block;
+  font-size: 4rem;
+}
+
+#ps-info {
+  padding: 1rem;
+}
+
+#ps-info {
+  background: rgb(208, 205, 205);
+  font-family: var(--MAIN-FONT);
+  margin: 1rem 5rem;
+  border: 2px solid var(--BG-COLOR2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#ps-info span {
+  color: var(--MAIN-COLOR2);
+  font-weight: bold;
+}
+
+#ps-info a:any-link {
+  text-decoration: underline;
+  color: var(--MAIN-COLOR2);
+}

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gidole&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* COLOR THEME VARIABALES */
+  --BG-COLOR: #d9d9d9;
+  --BG-COLOR2: #f1d9a7;
+  --MAIN-COLOR1: #db995a;
+  --MAIN-COLOR2: #da7635;
+  --TEXT-COLOR: #100f0f;
+
+  /* FONT VARIABLES */
+
+  --LOGO-FONT1: "Work Sans";
+  --LOGO-FONT2: "Cedarville Cursive";
+  --MAIN-FONT: "Gidole";
+  --SECONDARY-FONT: "Winky Sans";
+}

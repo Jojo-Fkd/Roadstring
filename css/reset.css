@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+label,
+input,
+button,
+textarea {
+  outline: none;
+  outline-color: none;
+  border: 1px solid black;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+p,
+span {
+  pointer-events: none;
+}

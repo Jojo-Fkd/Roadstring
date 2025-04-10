@@ -1,0 +1,49 @@
+body {
+  background: var(--BG-COLOR);
+}
+
+main img {
+  width: 250px;
+}
+
+main {
+  padding-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  height: 100vh;
+}
+
+main ul {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  list-style-type: none;
+  font-family: var(--MAIN-FONT);
+  font-size: 2rem;
+  transform: translateY(-55px);
+}
+
+main ul li {
+  background: rgba(0, 0, 0, 0.08);
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+main ul li.active {
+  border: 3px solid var(--MAIN-COLOR2);
+}
+
+main ul li.tuned {
+  border: 3px solid green;
+}
+
+main ul li.detune {
+  border: 3px solid red;
+}

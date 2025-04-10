@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadstring</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tuner.css" />
+    <script defer src="js/tuner.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <h1 class="logo">
+        <img src="Images/Roadstring_logo-removebg-preview.png" alt="" />
+        <div>Road <span>Strings</span></div>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <div></div>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <div></div>
+            <a href="history.html">History</a>
+          </li>
+          <li>
+            <div></div>
+            <a href="fundamentals.html">Fundamentals</a>
+          </li>
+          <li>
+            <div></div>
+            <a class="active" href="tuner.html">Guitar Tuner</a>
+          </li>
+        </ul>
+        <a href="levels.html"><button>Get Started</button></a>
+      </nav>
+    </header>
+    <!-- TUNER -->
+
+    <main>
+      <ul>
+        <li onclick="tuneString(this)">D</li>
+        <li onclick="tuneString(this)">A</li>
+        <li onclick="tuneString(this)">E</li>
+      </ul>
+      <img src="Images/guitar_tuner_img-removebg-preview.png" alt="" />
+      <ul>
+        <li onclick="tuneString(this)">G</li>
+        <li onclick="tuneString(this)">B</li>
+        <li onclick="tuneString(this)">e</li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,326 @@
+body {
+  background: var(--BG-COLOR);
+}
+
+/* MAIN CONTENT */
+
+/* WELCOMING SECTION */
+
+#welcome {
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+
+.greetings {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.greetings h1 {
+  font-family: var(--LOGO-FONT2);
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.greetings p {
+  font-family: var(--MAIN-FONT);
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.greetings p:last-child {
+  color: var(--MAIN-COLOR2);
+}
+
+/* NEEDS  SECTION */
+
+#needs {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 3rem;
+  min-height: 100vh;
+}
+
+.need-text h3 {
+  font-family: var(--SECONDARY-FONT);
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.need-text h3 span {
+  color: var(--MAIN-COLOR2);
+}
+
+.need-text p {
+  line-height: 1.5;
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+}
+
+.need-text ul {
+  padding: 1.5rem 0;
+  line-height: 1.3;
+}
+
+.need-text ul li {
+  font-family: var(--LOGO-FONT1);
+  font-size: 1.5rem;
+  font-weight: 350;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.equipment {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.equipment div {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: 250px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.equipment div img {
+  width: 100%;
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.equipment div p {
+  font-family: var(--MAIN-FONT);
+  background: rgb(211, 211, 211);
+  padding: 0.5rem;
+  border: 1px solid var(--MAIN-COLOR2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* BASIC SECTION */
+
+#basics .head {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#basics .head h1 {
+  font-family: var(--SECONDARY-FONT);
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+#basics .head p {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+  color: var(--MAIN-COLOR2);
+}
+
+.diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--MAIN-FONT);
+}
+
+.diagram img {
+  width: 900px;
+}
+
+.musical-alphabet {
+  font-family: var(--SECONDARY-FONT);
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+  font-weight: 300;
+}
+
+.musical-alphabet .alphabet {
+  display: block;
+  color: var(--MAIN-COLOR2);
+}
+
+.musical-alphabet p span {
+  color: var(--MAIN-COLOR2);
+}
+
+.musical-alphabet p:last-child svg {
+  transform: translateY(10px);
+}
+
+/* OPEN STRINGS */
+
+#open-strings {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 6rem;
+}
+
+#open-strings .head,
+#chords .head,
+#examples .head {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+#open-strings .head h1,
+#chords .head h1,
+#examples .head h1 {
+  font-family: var(--SECONDARY-FONT);
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+#open-strings .head p,
+#chords .head p,
+#examples .head p {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.2rem;
+  color: var(--MAIN-COLOR2);
+}
+
+#open-strings article {
+  display: flex;
+  align-items: center;
+}
+
+.indicators {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  transform: translateX(20px) translateY(-3px);
+}
+
+.indicators div {
+  height: 15px;
+  width: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.indicators div.active {
+  background: green;
+  border: 1px solid white;
+}
+
+#open-strings article div {
+  display: flex;
+  gap: 0.9rem;
+  flex-direction: column;
+}
+
+#open-strings article div svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chords {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.chord {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.chord section img {
+  width: 400px;
+}
+
+.chord section p {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.1rem;
+}
+
+.chord .play {
+  margin-right: 6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* EXAMPLES OF SONGS YOU CAN PLAY WITH COWBOY CHORDS */
+
+#examples {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 6rem;
+  min-height: 100vh;
+}
+
+.examples {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.examples div {
+  background: rgb(209, 209, 209);
+  border: 1px solid var(--MAIN-COLOR2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 175px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.examples div img {
+  width: 175px;
+}
+
+.examples div p:first-of-type {
+  font-family: var(--SECONDARY-FONT);
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--MAIN-COLOR2);
+}
+
+.examples div p {
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.examples div p:last-of-type {
+  font-family: var(--LOGO-FONT1);
+  font-weight: 320;
+}
+
+/* THANKS */
+
+#thanks {
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+#thanks p {
+  font-family: var(--SECONDARY-FONT);
+  color: var(--MAIN-COLOR2);
+  font-size: 4rem;
+}

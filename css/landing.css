@@ -1,0 +1,376 @@
+/* MAIN CONTENT */
+
+main {
+  background: url(../Images/background.jpeg);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  color: white;
+}
+
+.main-content h1 {
+  font-family: var(--LOGO-FONT2);
+  font-size: 4rem;
+}
+
+.main-content p {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.main-content h1,
+.main-content p {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.main-content button {
+  height: 55px;
+  width: 200px;
+  font-size: 1.4rem;
+  font-family: var(--SECONDARY-FONT);
+  background: var(--BG-COLOR2);
+  color: white;
+  border: 2px solid var(--MAIN-COLOR1);
+  border-radius: 10px;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.main-content button:hover {
+  background: transparent;
+  color: var(--MAIN-COLOR1);
+}
+
+.guitars {
+  z-index: 10;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.guitars .card {
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  border: 2px solid var(--MAIN-COLOR1);
+  overflow: hidden;
+  position: relative;
+}
+
+.guitars .card .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.guitars .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.guitars .card button {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--MAIN-COLOR1);
+  color: white;
+  font-family: var(--MAIN-FONT);
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid white;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translate(-50%, 5px);
+}
+
+.guitars .card:hover .hover {
+  opacity: 1;
+}
+
+.guitars .card:hover button {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* LANDING PAGE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 990px) {
+  main {
+    gap: 1.5rem;
+    padding-top: 5rem;
+  }
+
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .main-content p {
+    font-size: 1.2rem;
+  }
+
+  .main-content button {
+    height: 50px;
+    width: 160px;
+    font-size: 1.2rem;
+  }
+
+  .guitars {
+    z-index: 10;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .guitars .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .guitars .card button {
+    display: none;
+    width: 78px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  main {
+    gap: 1.3rem;
+    padding-top: 5rem;
+  }
+
+  .main-content h1 {
+    font-size: 3rem;
+  }
+
+  .main-content p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    width: 500px;
+    text-align: center;
+  }
+
+  .main-content button {
+    height: 47px;
+    width: 140px;
+    font-size: 1.1rem;
+  }
+
+  .guitars {
+    z-index: 10;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .guitars .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .guitars .card button {
+    width: 78px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .guitars .card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .guitars .card button {
+    width: 60px;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-content h1 {
+    font-size: 2.7rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 300px;
+    text-align: center;
+  }
+
+  .main-content button {
+    height: 45px;
+    width: 120px;
+    font-size: 1rem;
+  }
+
+  .guitars {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .main-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .guitars .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* DESCRIPTION POPUP */
+
+#descriptions {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#descriptions.active {
+  opacity: 1;
+  z-index: 100;
+}
+
+#descriptions .description-popup {
+  height: 300px;
+  width: 98%;
+  border: 2px solid var(--MAIN-COLOR1);
+  background: white;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+#descriptions .description-popup div.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#descriptions .description-popup div.header h3 {
+  font-family: var(--LOGO-FONT2);
+  font-size: 1.4rem;
+}
+
+#descriptions .description-popup div.header img {
+  height: 200px;
+  border-radius: 50px;
+  border: 1.5px solid var(--MAIN-COLOR2);
+}
+
+#descriptions .description-popup article,
+.further p {
+  width: 400px;
+  padding: 1rem;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  background: whitesmoke;
+}
+
+#descriptions .description-popup p {
+  font-family: var(--MAIN-FONT);
+  font-size: 1.1rem;
+}
+
+#descriptions .description-popup p span {
+  color: var(--MAIN-COLOR2);
+}
+
+.further {
+  width: 410px;
+}
+
+#descriptions .description-popup .legends {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  padding: 1rem 0;
+}
+
+#descriptions .description-popup .legends div {
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  border: 1.5px solid var(--MAIN-COLOR2);
+  width: 92px;
+  height: 92px;
+}
+
+#descriptions .description-popup .legends div img {
+  width: 92px;
+}
+
+.further p {
+  width: 100%;
+  max-height: 120px;
+  font-size: 0.9rem !important;
+  background: rgba(0, 0, 0, 0.01);
+  border: 1.5px solid var(--MAIN-COLOR1);
+}
+
+.close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid;
+  border-bottom-left-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: var(--MAIN-COLOR2);
+  cursor: pointer;
+}
